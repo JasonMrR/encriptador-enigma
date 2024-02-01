@@ -1,0 +1,22 @@
+.footer {
+  width: calc(100% - 71px);
+  background-color: var(--color-terciario);
+  text-align: center;
+  padding: 12px 0;
+  font-size: var(--texto-md);
+}
+
+.footer a {
+  color: var(--color-primario);
+  text-decoration: underline;
+  text-decoration-line: line-through;
+  transition: 0.3s ease-in-out;
+}
+
+.footer a:hover {
+  color: var(--color-secundario);
+}
+
+.footer i {
+  color: #842c2c;
+}
