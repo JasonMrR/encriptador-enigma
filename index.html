@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Encriptador + Enigma</title>
+    <title>Encriptador Enigma</title>
     <meta
       name="description"
       content="Codifica y decodifica texto utilizando el encriptador Alura. Protege tus mensajes con nuestro exclusivo método de codificación o descifra textos encriptados de manera sencilla. ¡Descubre la potencia del codificador Alura ahora!"
@@ -11,7 +11,7 @@
     <meta name="keywords" content="codificación, decodificación, texto, codificador Alura, encriptado, mensajes seguros">
     <meta name="author" content="Jason Morales Rodriguez">
     <meta name="robots" content="index, follow">
-    <link rel="icon" href="ruta-del-icono">
+    <link rel="icon" href="assets/Background.jpeg">
 
     <!--Etiquetas para redes sociales-->
 
@@ -20,19 +20,35 @@
     <meta property="og:image" content="URL-de-la-imagen">
     <meta property="og:url" content="URL-de-la-página">
 
+    <!--Etiquetas de estilos-->
+
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="header-styles.css">
-    <link rel="stylesheet" href="footer-styles.css">
+    <link rel="stylesheet" href="styles/header-styles.css">
+    <link rel="stylesheet" href="styles/comandos-styles.css">
+    <link rel="stylesheet" href="styles/resultados-styles.css">
+    <link rel="stylesheet" href="styles/footer-styles.css">
+    
+    <!--Librerias y recursos-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   </head>
   <body class="body">
-
+    
+    <div class="background"></div>
     
     <header class="header">
       <figure> 
-        <img class="header__logo" src="assets/logo-alura.png" alt="Logo de la compañia alura"/>
+        <img class="header__logo" src="assets/pruebasinFondo.svg" alt="Logo de la compañia alura"/>
       </figure>
       <ul class="header__links">
+        <li class="header__link">
+          <a href="https://github.com/JasonMrR" target="_blank">
+            <i class="fa-brands fa-square-github"></i>
+          </a>
+        </li>
         <li class="header__link">
           <a href="https://www.linkedin.com/in/jason-morales-rodriguez-689a6427a" target="_blank">
             <i class="fa-brands fa-linkedin"></i>
@@ -45,17 +61,29 @@
       <h1 class="main__title">Encriptador Enigma</h1>
       <section class="sections">
         <section class="section__comandos">
-          <textarea class="comandos__mensaje" placeholder="Ingrese el mensaje para encriptar"></textarea>
+          <textarea class="comandos__mensaje" placeholder="Ingrese el mensaje secreto aquí..."></textarea>
           <div class="comandos__botones">
             <span><i class="fa-solid fa-circle-info"></i> Solo letras minúsculas y sin acentos</span>
             <div class="botones">
-              <input class="boton boton__encriptar" type="button" class="comando__encriptar" value="Encriptar"/>
-              <input class="boton boton__desencriptar" type="button" class="comando__encriptar" value="Desencriptar"/>
+              <input id="btnEncriptar" class="boton boton__encriptar" type="button" class="comando__encriptar" value="Encriptar"/>
+              <input id="btnDesencriptar" class="boton boton__desencriptar" type="button" class="comando__encriptar" value="Desencriptar"/>
             </div>
           </div>
         </section>
         <section class="section__resultados">
-          <h2>hola</h2>
+          <div class="resultados__mensaje">
+            <div>
+              <h1 class="resultados__titulo">Christopher esta espera el mensaje para ponerse a trabajar</h1>
+              <div id="barraDeCarga" class="barra-de-carga"></div>
+            </div>
+            <div class="resultados__contenedor-imagen">
+              <figure class="resultados__imagen">
+                <img src="assets/maquita-christopher.jpeg" alt="Maquina christopher creada por Turing" />
+              </figure>
+              <p class="resultados__etiqueta">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <input id="btnCopiar" class="boton__copiar" type="button" value="Copiar texto"/>
+          </div>
         </section>
       </section>
     </main>
@@ -65,8 +93,8 @@
         Jason Morales Rodriguez
       </a></p>
     </footer>
-    
-    <div class="background"></div>
 
+
+    <script src="app.js" type="module" defer></script>
   </body>
 </html>

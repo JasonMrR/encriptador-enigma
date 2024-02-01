@@ -2,6 +2,7 @@
   --color-primario: #140001;
   --color-secundario: #efe2c0;
   --color-terciario: #a99477;
+  --color-auxiliar: #282423;
   --texto-sm: 1rem;
   --texto-md: 1.2rem;
   --texto-lg: 1.4rem;
@@ -13,15 +14,15 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Teko', sans-serif;
 }
 
 .body {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
-  height: 100dvh;
-  overflow: hidden;
 }
 
 .background {
@@ -38,7 +39,8 @@
 }
 
 .main{
-  height: calc(100vh - 70px);
+  height: calc(100dvh - 70px);
+  margin-left: 72px;
   display: flex;
   flex-direction: column;
 }
@@ -56,65 +58,33 @@
 }
 
 .sections {
-  height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  column-gap: 4px;
+  row-gap: 4px;
 }
 
-.section__comandos{
-  display: flex;
-  justify-content:space-between;
-  flex-direction: column;
-  margin: 24px;
+@media (width < 1200px) {
+  .main {
+    height: calc(100dvh - 140px );
+    margin-left: 0px;
+  }
+  .main__title {
+    margin: 0;
+    margin-top: 12px;
+    align-self: center;
+    font-size: var(--texto-xxl);
+  }
 }
 
-.comandos__botones{
-  display: flex;
-  flex-direction: column;
-}
-
-.botones{
-  margin-top: 8px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.comandos__botones span {
-  font-size: var(--texto-md);
-  border-radius: 8px;
-  padding: 4px;
-  width: max-content;
-  background-color: var(--color-primario);
-  color: white;
-}
-
-.botones .boton {
-  border-radius: 4px;
-  width: 320px;
-  font-weight: bold;
-  font-size: var(--texto-md);
-  padding: 24px;
-  transition: 0.3s ease-in;
-}
-
-.botones .boton:hover {
-  filter: brightness(150%);
-}
-
-.boton__encriptar {
-  color: var(--color-terciario);
-  border: 3px solid var(--color-primario);
-  background-color: var(--color-primario);
-  box-shadow: 8px 8px 2px var(--color-terciario);
-}
-
-.boton__desencriptar {
-  color: var(--color-primario);
-  border: 3px solid var(--color-terciario);
-  background-color: var(--color-terciario);
-  box-shadow: 8px 8px 2px var(--color-primario);
-}
-
-.section__resultados{
-  background-color: rgb(44, 128, 201);
+@media (width < 850px) {
+  .body {
+    height: fit-content;
+  }
+  .main {
+    height: fit-content;
+  }
+  .sections {
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,9 +1,11 @@
 .footer {
-  width: calc(100% - 71px);
+  width: 100%;
   background-color: var(--color-terciario);
   text-align: center;
   padding: 12px 0;
-  font-size: var(--texto-md);
+  font-size: var(--texto-lg);
+  font-weight: 400;
+  margin-bottom: 8px;
 }
 
 .footer a {
