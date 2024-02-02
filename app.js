@@ -52,10 +52,12 @@ function presentarMensaje (mensaje) {
   setTimeout(() => { 
     barraDeCarga.classList.remove('cargando');
     txtResultado.innerHTML = mensaje
+    btnCopiar.disabled = false;
   }, 2000);
 }
 
 function encriptarTexto() {
+  btnCopiar.disabled = true
   //1. ajustamos el scroll para ver la animación 
   moverScroll();
   //2. asignamos la animación de carga
@@ -64,8 +66,6 @@ function encriptarTexto() {
   obtenerPalabraEncriptada();
   //4. simulamos tiempo de espera para presentar el resultado 
   presentarMensaje(mensajeEncriptado)
-  //5 habilitar el boton de copiado
-  btnCopiar.disabled = false;
 }
 
 function comprobarDesencriptadoPorPalabra(indiceIzquierdo, indiceDerecho) {
@@ -104,6 +104,7 @@ function obtenerPalabraDesencriptada() {
 }
 
 function desencriptarTexto(e) {
+  btnCopiar.disabled = true
   //1. ajustamos el scroll para ver la animación 
   moverScroll();
   //2. obtenemos el resultado de desencriptado
@@ -115,9 +116,8 @@ function desencriptarTexto(e) {
   } else {
     alert("La palabra no se encuentra encriptada con enigma");
     txtResultado.innerHTML = "Ingresa el texto que desees encriptar o desencriptar.";
+    btnCopiar.disabled = true
   }
-  //5 habilitar el boton de copiado
-  btnCopiar.disabled = false;
 }
 
 function copiarTexto() {
