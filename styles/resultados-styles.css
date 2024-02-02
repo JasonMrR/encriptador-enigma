@@ -1,0 +1,128 @@
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  95% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+.section__resultados {
+  display: flex;
+  justify-content:flex-end;
+  margin: 24px;
+}
+
+.resultados__mensaje {
+  padding: 14px 24px;
+  width: clamp(320px, 100%, 600px);
+  background-color: var(--color-auxiliar);
+  overflow: hidden;
+  border-radius: 24px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 10px 10px 2px var(--color-primario);
+  border: 1px solid var(--color-secundario);
+}
+
+
+.resultados__titulo {
+  font-size: var(--texto-xxl);
+  color: var(--color-terciario);
+}
+
+.barra-de-carga {
+  width: 0%;
+  height: 10px;
+  margin: 8px 0;
+  background-color: var(--color-secundario);
+}
+
+.cargando {
+  animation: loading 2s ease-in-out 1;
+}
+
+.resultados__contenedor-imagen {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.resultados__imagen {
+  width: 100%;
+  max-width: 320px;
+  align-self: center;
+}
+
+.resultados__imagen img {
+  width: 100%;
+}
+
+.resultados__etiqueta {
+  max-height: 100px;
+  color: white;
+  text-align: center;
+  font-size: var(--texto-lg);
+  max-lines: 2;
+  overflow: scroll;
+}
+
+.boton__copiar {
+  margin-top: 4px;
+  width: 100%;
+  font-weight: bold;
+  font-size: var(--texto-lg);
+  padding: 12px;
+  transition: 0.3s ease-in;
+  color: var(--color-primario);
+  border: none;
+  background-color: var(--color-secundario);
+  cursor: pointer;
+
+}
+
+.boton__copiar:hover{
+  filter: brightness(120%);
+}
+
+
+@media (width < 1200px) {
+  .resultados__titulo {
+    font-size: var(--texto-md);
+    color: var(--color-terciario);
+  }
+}
+
+@media (width < 850px) {
+  .section__resultados {
+    margin: 12px;
+  }
+  .resultados__mensaje {
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+  }
+  .botones{
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .botones .boton {
+    width: 100%;
+  }
+  .resultados__imagen {
+    width: 100%;
+    max-width: 100%;
+    align-self: center;
+  }
+  .resultados__etiqueta {
+    font-size: var(--texto-md);
+  }
+}

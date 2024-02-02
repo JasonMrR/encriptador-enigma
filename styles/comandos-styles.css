@@ -1,0 +1,92 @@
+.section__comandos {
+  display: flex;
+  justify-content:space-between;
+  flex-direction: column;
+  margin: 24px;
+}
+
+.comandos__mensaje {
+  width: clamp(320px, 100%, 400px);
+  height: 100%;
+  margin-bottom: 24px;
+  color: var(--color-secundario);
+  font-size: var(--texto-xl);
+  background-color: rgba(1, 1, 1, 0.70);
+  border: none;
+  border-radius: 24px;
+  padding: 12px;
+}
+.comandos__mensaje::placeholder{
+  color: var(--color-secundario);
+}
+
+.comandos__botones{
+  display: flex;
+  flex-direction: column;
+}
+
+.botones{
+  margin-top: 8px;
+  display: flex;
+  gap: 24px;
+}
+
+.comandos__botones span {
+  font-size: var(--texto-md);
+  border-radius: 8px;
+  padding: 4px;
+  width: max-content;
+  background-color: var(--color-primario);
+  color: white;
+}
+
+.botones .boton {
+  border-radius: 4px;
+  width: clamp(200px, 100%, 320px);
+  font-size: var(--texto-xl);
+  padding: 14px;
+  transition: 0.3s ease-in;
+}
+
+.botones .boton:hover {
+  filter: brightness(150%);
+}
+
+.boton__encriptar {
+  color: var(--color-terciario);
+  border: 3px solid var(--color-primario);
+  background-color: var(--color-primario);
+  box-shadow: 8px 8px 2px var(--color-terciario);
+}
+
+.boton__desencriptar {
+  color: var(--color-primario);
+  border: 3px solid var(--color-terciario);
+  background-color: var(--color-terciario);
+  box-shadow: 8px 8px 2px var(--color-primario);
+}
+
+
+@media (width < 850px) {
+  .section__comandos {
+    margin: 12px;
+    height: calc(100dvh - 200px);
+  }
+  .comandos__mensaje {
+    width: 100%;
+    font-size: var(--texto-md);
+    background-color: rgba(1, 1, 1, 0.60);
+  }
+  .botones{
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .botones .boton {
+    width: 100%;
+    padding: 12px;
+    box-shadow: none;
+  }
+}
