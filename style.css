@@ -43,6 +43,8 @@
   margin-left: 72px;
   display: flex;
   flex-direction: column;
+  justify-self: center;
+  justify-content: center;
 }
 
 .main__title{ 
@@ -69,12 +71,6 @@
     height: calc(100dvh - 140px );
     margin-left: 0px;
   }
-  .main__title {
-    margin: 0;
-    margin-top: 12px;
-    align-self: center;
-    font-size: var(--texto-xxl);
-  }
 }
 
 @media (width < 850px) {
@@ -86,5 +82,18 @@
   }
   .sections {
     grid-template-columns: 1fr;
+  }
+  .main__title {
+    margin: 0;
+    margin-top: 12px;
+    align-self: center;
+    font-size: var(--texto-xxl);
+  }
+}
+
+
+@media (width < 350px) {
+  .main__title {
+    font-size: var(--texto-xl);
   }
 }

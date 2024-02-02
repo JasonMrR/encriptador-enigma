@@ -11,11 +11,11 @@
     <meta name="keywords" content="codificación, decodificación, texto, codificador Alura, encriptado, mensajes seguros">
     <meta name="author" content="Jason Morales Rodriguez">
     <meta name="robots" content="index, follow">
-    <link rel="icon" href="assets/Background.jpeg">
+    <link rel="icon" href="assets/logo-enigma.png" type="image/png">
 
     <!--Etiquetas para redes sociales-->
 
-    <meta property="og:title" content="Encriptador + Enigma">
+    <meta property="og:title" content="Encriptador Enigma">
     <meta property="og:description" content="Codifica y decodifica texto utilizando el encriptador Alura. Protege tus mensajes con nuestro exclusivo método de codificación o descifra textos encriptados de manera sencilla. ¡Descubre la potencia del codificador Alura ahora!">
     <meta property="og:image" content="URL-de-la-imagen">
     <meta property="og:url" content="URL-de-la-página">
@@ -61,7 +61,7 @@
       <h1 class="main__title">Encriptador Enigma</h1>
       <section class="sections">
         <section class="section__comandos">
-          <textarea class="comandos__mensaje" placeholder="Ingrese el mensaje secreto aquí..."></textarea>
+          <textarea id="mensajeSecreto" class="comandos__mensaje" placeholder="Ingrese el mensaje secreto aquí..."></textarea>
           <div class="comandos__botones">
             <span><i class="fa-solid fa-circle-info"></i> Solo letras minúsculas y sin acentos</span>
             <div class="botones">
@@ -70,7 +70,7 @@
             </div>
           </div>
         </section>
-        <section class="section__resultados">
+        <section id="resultados" class="section__resultados">
           <div class="resultados__mensaje">
             <div>
               <h1 class="resultados__titulo">Christopher esta espera el mensaje para ponerse a trabajar</h1>
@@ -80,9 +80,9 @@
               <figure class="resultados__imagen">
                 <img src="assets/maquita-christopher.jpeg" alt="Maquina christopher creada por Turing" />
               </figure>
-              <p class="resultados__etiqueta">Ingresa el texto que desees encriptar o desencriptar.</p>
+              <p id="txtResultados" class="resultados__etiqueta">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
-            <input id="btnCopiar" class="boton__copiar" type="button" value="Copiar texto"/>
+            <input id="btnCopiar" class="boton__copiar" type="button" value="Copiar texto" disabled/>
           </div>
         </section>
       </section>
@@ -94,7 +94,7 @@
       </a></p>
     </footer>
 
+    <script type="module" src="app.js"></script>
 
-    <script src="app.js" type="module" defer></script>
   </body>
 </html>

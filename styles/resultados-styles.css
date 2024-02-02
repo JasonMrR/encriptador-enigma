@@ -2,7 +2,7 @@
   0% {
     width: 0%;
   }
-  99% {
+  95% {
     width: 100%;
   }
   100% {
@@ -64,8 +64,12 @@
 }
 
 .resultados__etiqueta {
+  max-height: 100px;
   color: white;
   text-align: center;
+  font-size: var(--texto-lg);
+  max-lines: 2;
+  overflow: scroll;
 }
 
 .boton__copiar {
@@ -117,5 +121,8 @@
     width: 100%;
     max-width: 100%;
     align-self: center;
+  }
+  .resultados__etiqueta {
+    font-size: var(--texto-md);
   }
 }
