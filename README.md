@@ -2,22 +2,23 @@
 
 ## Descripción
 
-El Encriptador Enigma es una aplicación web que permite codificar y decodificar texto utilizando el encriptador Alura. Protege tus mensajes con nuestro exclusivo método de codificación o descifra textos encriptados de manera sencilla.
+El Encriptador Enigma es una aplicación web que surge como la solución al desafío planteado por Alura para codificar y decodificar mensajes de manera segura. Inspirado en el fascinante mundo de la criptografía, el diseño de esta herramienta toma referencias visuales de la película "Código Enigma", brindando una experiencia única y evocadora.
 
 ## Características
 
 - Codificación y decodificación de texto.
 - Soporte para letras minúsculas y sin acentos.
-- Animaciones y mensajes visuales.
+- Interfaz gráfica inspirada en la estética de "Código Enigma".
+- Animaciones y mensajes visuales para una experiencia interactiva.
 
 ## Capturas de Pantalla
 
-![Captura de pantalla 1](/ruta/a/captura-1.png)
-![Captura de pantalla 2](/ruta/a/captura-2.png)
+![Interfaz web](/screenshots/pagina=principal.png)
+![Interfaz movile](/ruta/a/interfaz-celular.png)
 
 ## Instalación
 
-1. Clona el repositorio: `git clone https://github.com/tuusuario/tuproject.git`
+1. Clona el repositorio: `https://github.com/JasonMrR/encriptador-enigma.git`
 2. Abre `index.html` en tu navegador.
 
 ## Uso
@@ -32,6 +33,10 @@ El Encriptador Enigma es una aplicación web que permite codificar y decodificar
 - CSS
 - JavaScript
 - Font Awesome
+
+## Inspiración
+
+La estética y diseño del Encriptador Enigma están fuertemente inspirados en la película "Código Enigma", transportándote a la época de la Segunda Guerra Mundial y el fascinante mundo de la criptografía.
 
 ## Autor
 
