@@ -13,8 +13,8 @@ El Encriptador Enigma es una aplicación web que surge como la solución al desa
 
 ## Capturas de Pantalla
 
-![Interfaz web](/screenshots/pagina=principal.png)
-![Interfaz movile](/ruta/a/interfaz-celular.png)
+![Interfaz web](/screenshots/pagina-principal.png)
+![Interfaz movile](/screenshots/interfaz-celular.png)
 
 ## Instalación
 
