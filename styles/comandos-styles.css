@@ -70,7 +70,7 @@
 @media (width < 850px) {
   .section__comandos {
     margin: 12px;
-    height: calc(100dvh - 200px);
+    height: calc(100svh - 200px);
   }
   .comandos__mensaje {
     width: 100%;

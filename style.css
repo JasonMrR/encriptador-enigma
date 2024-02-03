@@ -16,6 +16,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Teko', sans-serif;
+  scroll-behavior: smooth;
 }
 
 .body {
@@ -39,7 +40,7 @@
 }
 
 .main{
-  height: calc(100dvh - 70px);
+  min-height: calc(100dvh - 70px);
   margin-left: 72px;
   display: flex;
   flex-direction: column;
@@ -68,7 +69,6 @@
 
 @media (width < 1200px) {
   .main {
-    height: calc(100dvh - 140px );
     margin-left: 0px;
   }
 }
