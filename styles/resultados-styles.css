@@ -14,11 +14,12 @@
   display: flex;
   justify-content:flex-end;
   margin: 24px;
+  width: 50%;
+  max-width: 600px;
 }
 
 .resultados__mensaje {
   padding: 14px 24px;
-  width: clamp(320px, 100%, 600px);
   background-color: var(--color-auxiliar);
   overflow: hidden;
   border-radius: 24px;
@@ -63,13 +64,19 @@
   width: 100%;
 }
 
-.resultados__etiqueta {
-  max-height: 100px;
-  color: white;
-  text-align: center;
-  font-size: var(--texto-lg);
-  max-lines: 2;
+.container__etiqueta{
+  max-height: 120px;
+  align-self: center;
   overflow: scroll;
+  display: flex;
+  justify-content: center;
+  margin: 12px;
+}
+
+.resultados__etiqueta {
+  color: white;
+  font-size: var(--texto-lg);
+  line-clamp: 1;
 }
 
 .boton__copiar {
@@ -100,7 +107,11 @@
 
 @media (width < 850px) {
   .section__resultados {
-    margin: 12px;
+    width: 100%;
+    max-width: none;
+    margin: 0px;
+    margin-top: 100px;
+    margin-bottom: 12px;
   }
   .resultados__mensaje {
     width: 100%;

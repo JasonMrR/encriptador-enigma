@@ -3,10 +3,11 @@
   justify-content:space-between;
   flex-direction: column;
   margin: 24px;
+  width: 50%;
+  max-width: 600px;
 }
 
 .comandos__mensaje {
-  width: clamp(320px, 100%, 400px);
   height: 100%;
   margin-bottom: 24px;
   color: var(--color-secundario);
@@ -69,11 +70,13 @@
 
 @media (width < 850px) {
   .section__comandos {
-    margin: 12px;
+    width: 100%;
+    max-width: none;
+    margin: 0px;
+    margin-top: 12px;
     height: calc(100svh - 200px);
   }
   .comandos__mensaje {
-    width: 100%;
     font-size: var(--texto-md);
     background-color: rgba(1, 1, 1, 0.60);
   }
